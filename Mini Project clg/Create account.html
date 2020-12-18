@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="./css/qq.css">
+</head>
+<body>
+<div class="Login-box">
+  <h1>Create an account</h1>
+   <div class="col">
+  <!--      <a href="#" class="fb btn" id="ff">
+          <i class="fab fa-facebook" aria-hidden="true" ></i> Sign Up with Facebook
+        </a>
+        <a href="#" class="twitter btn" id="tt">
+          <i class="fab fa-twitter" aria-hidden="true" ></i>  Sign Up with Twitter
+        </a> -->
+        <a href="http://localhost/ecommerce%20MIni%20Project/index.php" class="google btn" id="gg">
+          <i class="fab fa-google-plus-g" aria-hidden="true" ></i>  Sign Up with Google
+        </a>
+      </div>
+
+<div class="textbox">
+  <i class="far fa-user" aria-hidden="true"></i>
+ <form class="box" action="Create account.html" method="post" >
+  <input type="text" placeholder="First name" name="" required>
+</div>
+<div class="textbox">
+  <i class="far fa-user" aria-hidden="true"></i>
+  <input type="text" placeholder="Last name" name="" required>
+</div>
+<div class="textbox">
+  <i class="far fa-envelope" aria-hidden="true"></i>
+  <input type="Email" placeholder="Email Id" name="" required>
+</div>
+<div class="textbox">
+  <i class="fas fa-lock" aria-hidden="true"></i>
+  <input type="password" placeholder="Password" id="password"  name="password1" required>
+  <span class="eyee">
+   <i class="fas fa-eye" aria-hidden="true" id="eye" onclick="toggle()"></i> </span>
+  </div> 
+<div class="textbox">
+  <i class="fas fa-lock" aria-hidden="true"></i>
+  <input type="password" placeholder="Confirm your Password" id="Password"  name="password2" required>  
+  </form>
+</div>
+<input class="btn" type="button" name="" value="Signup">
+</div>
+<script>
+var state= false;
+function toggle(){
+    if(state){
+  document.getElementById("password").setAttribute("type","password");
+  document.getElementById("eye").style.color='#7a797e';
+  state = false;
+     }
+     else{
+  document.getElementById("password").setAttribute("type","text");
+  document.getElementById("eye").style.color='#5887ef';
+  state = true;
+     }
+}
+ // is same or not. 
+            function checkPassword(form) { 
+                password1 = form.password1.value; 
+                password2 = form.password2.value; 
+  
+                // If password not entered 
+                if (password1 == '') 
+                    alert ("Please enter Password"); 
+                      
+                // If confirm password not entered 
+                else if (password2 == '') 
+                    alert ("Please enter confirm password"); 
+                      
+                // If Not same return False.     
+                else if (password1 != password2) { 
+                    alert ("\nPassword did not match: Please try again...") 
+                    return false; 
+                } 
+  
+                // If same return True. 
+                else{ 
+                    alert("Password Match: Welcome to GeeksforGeeks!") 
+                    return true; 
+                } 
+            } 
+</script>
+</body>
+</html>
